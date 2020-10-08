@@ -3,24 +3,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--    스크롤뷰를 통해 스크롤이 가능하게 만들었습니다-->
+<!--    아래의 구성들은 전부 linear layout으로 했습니다-->
+<!--    만약 이 디자인을 contrain layout으로 하려면 어떻게 해야하는지 궁금합니다. -->
+
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#C419358E"
-        android:gravity="center_vertical"
-        android:paddingLeft="10dp"
-        android:text="씨네마천국"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -124,11 +118,6 @@
 
             </LinearLayout>
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/line" />
-
 
         </LinearLayout>
 
@@ -141,7 +130,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
@@ -152,7 +141,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="예매율"
-                android:textSize="18dp"/>
+                android:textSize="18sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -165,7 +154,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="5위"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     android:layout_marginRight="10dp"/>
 
@@ -174,7 +163,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1.8%"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     />
 
@@ -189,9 +178,9 @@
             android:background="@drawable/line" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.4"
+            android:layout_weight="1"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -225,10 +214,14 @@
                     android:text="8.2" />
             </LinearLayout>
 
-        </LinearLayout>
 
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/line" />
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
@@ -285,7 +278,7 @@
         android:textSize="20dp"
         android:textColor="@android:color/black"
         android:layout_marginBottom="15dp">
-    </TextView>>
+    </TextView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -307,7 +300,7 @@
             android:textSize="17dp"
             android:textColor="@android:color/black"
             android:layout_marginBottom="15dp">
-        </TextView>>
+        </TextView>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -322,7 +315,7 @@
             android:textColor="@android:color/black"
             android:layout_marginBottom="15dp"
             android:layout_marginRight="10dp">
-        </TextView>>
+        </TextView>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -330,7 +323,7 @@
             android:textSize="17dp"
             android:textColor="@android:color/black"
             android:layout_marginBottom="15dp">
-        </TextView>>
+        </TextView>
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -397,12 +390,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_facebook"
-            android:layout_marginRight="20dp"></ImageView>
+            android:layout_marginRight="20dp">
+
+        </ImageView>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_kakao"
-            android:layout_marginRight="20dp"></ImageView>
+            android:layout_marginRight="20dp">
+
+        </ImageView>
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -418,3 +415,4 @@
 
 </LinearLayout>
 </ScrollView>
+
